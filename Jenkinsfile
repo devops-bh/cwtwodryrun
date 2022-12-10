@@ -1,7 +1,7 @@
 node {
     stage("Prebuild") {
         sh 'cat Jenkinsfile'
-        sh "git pull" // ran into issue where Jenkins didn't seem to be pulling the correct file
+        sh 'ls -a'
     }
     stage("Build") {
         def image = docker.build 'devopsbh/nodeapp'
